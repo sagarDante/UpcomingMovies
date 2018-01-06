@@ -16,7 +16,7 @@ import java.util.List;
 public class MovielistAdapter  extends RecyclerView.Adapter<MovielistAdapter.ViewHolder> {
     private List<MoviesList> listItems;
     private Context c;
-   private String imgurl;
+    private String imgurl;
     private String imgid;
     private String Sadult;
     private String overview;
