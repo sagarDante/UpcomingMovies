@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chincholkar.sagar.upcomingmovies.MovieDetailScreen"
+    >
+    <LinearLayout android:padding="10dp"
+        android:layout_margin="5dp"
+    android:id="@+id/Sliderdots"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal|center_vertical"
+    >
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_margin="5dp"
+    android:padding="10dp"
+    android:layout_below="@+id/Sliderdots"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+    <TextView
+        android:textStyle="bold"
+        android:layout_weight="20"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:maxLines="5"
+        android:layout_weight="50"
+        android:id="@+id/overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:ellipsize="end"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_weight="10"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+
+        android:isIndicator="true"
+        android:numStars="10"
+        android:stepSize="0.1" />
+
+</LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+

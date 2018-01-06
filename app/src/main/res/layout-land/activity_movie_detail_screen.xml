@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chincholkar.sagar.upcomingmovies.MovieDetailScreen"
+    >
+    <LinearLayout android:padding="10dp"
+        android:layout_margin="5dp"
+    android:id="@+id/Sliderdots"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal|center_vertical"
+        android:weightSum="100"
+    >
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        />
+
+
+<LinearLayout
+    android:layout_weight="50"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    android:layout_below="@+id/Sliderdots"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+    <TextView
+        android:textStyle="bold"
+        android:layout_weight="20"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:maxLines="5"
+        android:layout_weight="60"
+        android:id="@+id/overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Overview"
+        android:ellipsize="end"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10" />
+
+
+</LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+
