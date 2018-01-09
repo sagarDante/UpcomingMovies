@@ -18,8 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.chincholkar.sagar.upcomingmovies.MovieDetailScreen" />
-        <activity android:name="com.chincholkar.sagar.upcomingmovies.About_Activity"></activity>
+        <activity android:name="com.chincholkar.sagar.upcomingmovies.MovieDetailScreen">
+        </activity>
+        <activity android:name="com.chincholkar.sagar.upcomingmovies.About_Activity">
+
+        </activity>
     </application>
 
 </manifest>
