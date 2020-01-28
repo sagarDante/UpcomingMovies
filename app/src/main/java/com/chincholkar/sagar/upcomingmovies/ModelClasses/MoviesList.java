@@ -1,4 +1,4 @@
-package com.chincholkar.sagar.upcomingmovies;
+package com.chincholkar.sagar.upcomingmovies.ModelClasses;
 
 /**
  * Created by mangal on 12/18/2017.

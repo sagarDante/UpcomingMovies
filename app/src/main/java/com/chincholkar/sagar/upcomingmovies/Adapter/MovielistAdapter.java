@@ -1,4 +1,4 @@
-package com.chincholkar.sagar.upcomingmovies;
+package com.chincholkar.sagar.upcomingmovies.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.chincholkar.sagar.upcomingmovies.ModelClasses.MoviesList;
+import com.chincholkar.sagar.upcomingmovies.MovieDetailScreen;
+import com.chincholkar.sagar.upcomingmovies.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -57,7 +60,7 @@ public class MovielistAdapter  extends RecyclerView.Adapter<MovielistAdapter.Vie
             @Override
             public void onClick(View v) {
 
-                Intent i=new Intent(c,MovieDetailScreen.class);
+                Intent i=new Intent(c, MovieDetailScreen.class);
 
                 i.putExtra("id",Mlist.getId());
                 i.putExtra("title",Mlist.getTitle());

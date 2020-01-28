@@ -10,6 +10,9 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.chincholkar.sagar.upcomingmovies.Adapter.MovielistAdapter;
+import com.chincholkar.sagar.upcomingmovies.ModelClasses.MoviesList;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
