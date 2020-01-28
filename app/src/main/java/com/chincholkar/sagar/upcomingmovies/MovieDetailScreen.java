@@ -10,6 +10,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.chincholkar.sagar.upcomingmovies.ModelClasses.MovieDetails;
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -41,7 +42,7 @@ public class MovieDetailScreen extends AppCompatActivity implements com.daimajia
     private JSONObject catObj;
     private RatingBar ratingBar;
     private static String TAG = MainActivity.class.getSimpleName();
-
+    Float rating1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +53,7 @@ public class MovieDetailScreen extends AppCompatActivity implements com.daimajia
         title = getIntent().getStringExtra("title");
         overview = getIntent().getStringExtra("Overview");
         rating=getIntent().getStringExtra("vote");
-        Float rating1=Float.parseFloat(rating);
+        rating1=Float.parseFloat(rating);
         Toast.makeText(getApplicationContext(), "id: " + id+" :"+rating, Toast.LENGTH_LONG).show();
         REQUEST_URL = "https://api.themoviedb.org/3/movie/"+id+"/images?api_key=b7cd3340a794e5a2f35e3abb820b497f";
         Imageurls= new ArrayList<>();
@@ -70,7 +71,7 @@ public class MovieDetailScreen extends AppCompatActivity implements com.daimajia
 
         titletv.setText(title);
         infotv.setText(overview);
-        Hash_file_maps = new HashMap<String, String>();
+        Hash_file_maps = new HashMap<>();
         sliderLayout = (SliderLayout)findViewById(R.id.slider);
 
         new MovieDetailScreen.UpcomingMovielist().execute();
